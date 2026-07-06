@@ -114,6 +114,7 @@ In the Copilot Chat panel, use the `@` prefix to summon an agent by name:
 | `@archie` | Architecture / API design review |
 | `@dash` | Performance review |
 | `@dexter` | Dependency review |
+| `@mgmt-breaking-change-analysis` | Breaking change analysis for ARM SDK PRs (on-demand, not label-triggered) |
 | `@mgmt-review` | Management SDK review |
 | `@scribe` | Documentation review |
 | `@sentinel` | Security review |
@@ -139,6 +140,7 @@ Agent definitions and their detailed review guidelines are stored in:
 │   ├── archie.agent.md
 │   ├── dash.agent.md
 │   ├── dexter.agent.md
+│   ├── mgmt-breaking-change-analysis.agent.md
 │   ├── mgmt-review.agent.md
 │   ├── scribe.agent.md
 │   ├── sentinel.agent.md
@@ -147,6 +149,7 @@ Agent definitions and their detailed review guidelines are stored in:
 │   ├── architecture-review-guidelines.md
 │   ├── performance-review-guidelines.md
 │   ├── dependency-review-guidelines.md
+│   ├── mgmt-breaking-change-analysis-guidelines.md
 │   ├── mgmt-review-guidelines.md
 │   ├── documentation-review-guidelines.md
 │   ├── security-review-guidelines.md
