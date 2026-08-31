@@ -4,7 +4,7 @@ In this document, we will give a brief introduction on how to use the JavaScript
 
 1. Prepare your environment.  
     NodeJS: can be installed from https://nodejs.org/en/download/  
-    typescript: install it with `npm install -g typescript`.
+    typescript: install it with `pnpm add -g typescript`.
 
 1. Create a empty folder and `cd` this folder.
 
@@ -16,7 +16,7 @@ In this document, we will give a brief introduction on how to use the JavaScript
 1. Initialize a new node project. 
 
     ```
-    npm init
+    pnpm init
     ```
 
     This step will create a `package.json` file in current folder.
@@ -25,13 +25,13 @@ In this document, we will give a brief introduction on how to use the JavaScript
 
    ```
    // install @azure/identity, you can use @azure/identity to do the authentication work.
-   npm install @azure/identity
+   pnpm add @azure/identity
    
    // Then install your target try out package, you can install the latest published with
-   npm install @azure/arm-XXX
+   pnpm add @azure/arm-XXX
 
    // or install it from your local JS SDK artifact file. 
-   npm install D:\\dev\\test\\test-compute\\azure-arm-XXX-1.0.0.tgz   
+   pnpm add D:\\dev\\test\\test-compute\\azure-arm-XXX-1.0.0.tgz   
    ```
 
    In the case of verifying the unpublished packages, you may download the artifact from either rest api specs CI pipeline or from the release request issue that we provided.
@@ -69,7 +69,7 @@ In this document, we will give a brief introduction on how to use the JavaScript
 1. Install all the dependencies
 
    ```
-   npm install // need to make sure package.json exists and has contained at step 4.
+   pnpm install # need to make sure package.json exists and has been populated at step 4.
    ```
 
 1. Compile the ts file.
