@@ -23,7 +23,7 @@ node --version
 The [Node Package Manager](https://npmjs.com) (npm) is included when you install Node. You can access it from the command-line, similar to Node:
 
 ```sh
-npm --version
+pnpm --version
 ```
 
 ## Setting up your project
@@ -38,7 +38,7 @@ cd example
 Now, let's [set up a package.json file](https://docs.npmjs.com/creating-a-package-json-file) to configure npm:
 
 ```sh
-npm init -y
+pnpm init
 ```
 
 Follow the prompts and npm will generate a starter [package.json](https://docs.npmjs.com/files/package.json) for you.
@@ -48,7 +48,7 @@ Now, we can install Azure SDK packages. The Azure SDK is composed of many separa
 For example, if you wish to use the Blob functionality provided by Azure's Storage service, you can install the `@azure/storage-blob` package:
 
 ```sh
-npm install --save @azure/storage-blob
+pnpm add @azure/storage-blob
 ```
 
 ## Choosing a bundler
@@ -60,7 +60,7 @@ Below we show examples of using three popular bundlers: [Webpack](https://webpac
 First, you need to install [webpack](https://webpack.js.org/) globally:
 
 ```sh
-npm install -g webpack webpack-cli
+pnpm add -g webpack webpack-cli
 ```
 
 Once this is done, you can use webpack by configuring your project in the way that webpack expects.
@@ -96,7 +96,7 @@ If you want to customize the name or location of your input file, the bundled fi
 First, you need to install [TypeScript](https://typescriptlang.org) and a [Webpack loader](https://webpack.js.org/loaders/) for TypeScript:
 
 ```sh
-npm install --save-dev typescript ts-loader
+pnpm add -D typescript ts-loader
 ```
 
 Now, let's create a very basic [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file to configure TypeScript. If you've already configured TypeScript, you can skip this step. Save the following `tsconfig.json` file next to your `package.json` file you created earlier:
@@ -170,7 +170,7 @@ Now, you can use this bundled output file inside an html page via a script tag:
 First, you need to install [rollup](https://rollupjs.org/) globally:
 
 ```sh
-npm install -g rollup
+pnpm add -g rollup
 ```
 
 Once this is done, you can use rollup by configuring your project in the way that rollup expects.
@@ -204,7 +204,7 @@ export default {
 We also need to install the plugins we referenced in the above file:
 
 ```sh
-npm install --save-dev @rollup/plugin-node-resolve
+pnpm add -D @rollup/plugin-node-resolve
 ```
 
 This configuration should work for most of our SDK packages.  However, if the package that you are using have runtime dependencies that are not available on browsers, you may need a more complex configuration.  For example, bundling `@azure/storage-blob` usage
@@ -265,7 +265,7 @@ The above configuration may need to change based on which SDK packages your code
 We also need to install the plugins we referenced in the above file:
 
 ```sh
-npm install --save-dev @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-json rollup-plugin-shim
+pnpm add -D @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-json rollup-plugin-shim
 ```
 
 Now that we have our config file and necessary plugins installed, we can run rollup:
@@ -287,7 +287,7 @@ Now, you can use this bundle inside an html page via a script tag:
 First, you need to install [TypeScript](https://typescriptlang.org):
 
 ```sh
-npm install --save-dev typescript
+pnpm add -D typescript
 ```
 
 Next, let's create a very basic [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file to configure TypeScript. If you've already configured TypeScript, you can skip this step. Save the following `tsconfig.json` file next to your `package.json` file you created earlier:
@@ -365,7 +365,7 @@ The above configuration may need to change based on which SDK packages your code
 We also need to install the plugins we referenced in the above file:
 
 ```sh
-npm install --save-dev @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-json rollup-plugin-shim rollup-plugin-typescript2
+pnpm add -D @rollup/plugin-node-resolve @rollup/plugin-commonjs @rollup/plugin-json rollup-plugin-shim rollup-plugin-typescript2
 ```
 
 Now that we have our config file and necessary plugins installed, we can run rollup:
@@ -387,7 +387,7 @@ Now you can use this bundled output file inside an html page via a script tag:
 First, you need to install [parcel](https://parceljs.org/) globally:
 
 ```sh
-npm install -g parcel
+pnpm add -g parcel
 ```
 
 Once this is done, you can use parcel by configuring your project in the way that parcel expects.
@@ -463,7 +463,7 @@ Parcel uses [browserslist](https://github.com/browserslist/browserslist) to conf
 Next, you need to install [TypeScript](https://typescriptlang.org):
 
 ```sh
-npm install --save-dev typescript
+pnpm add -D typescript
 ```
 
 Next, let's create a very basic [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file to configure TypeScript:
