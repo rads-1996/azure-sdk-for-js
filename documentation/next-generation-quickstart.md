@@ -153,7 +153,7 @@ const resourcesClient = new resources.ResourceManagementClient(credential, subsc
 TypeScript
 
 ```typescript
-async function updateResourceGroup(resourceGroupName: string) {
+async function createResourceGroup(resourceGroupName: string) {
   const parameter: ResourceGroup = {
     location: "eastus",
     tags: {
@@ -594,10 +594,10 @@ TypeScript
 
 ```typescript
 async function createVirtualMachines() {
-  createResourceGroup();
-  createVirtualNetwork();
-  createSubnet();
-  createNetworkInterface(resourceGroupName, location, interfaceName);
+  await createResourceGroup();
+  await createVirtualNetwork();
+  await createSubnet();
+  await createNetworkInterface(resourceGroupName, location, interfaceName);
   const parameter: VirtualMachine = {
     location: location,
     hardwareProfile: {
@@ -670,10 +670,10 @@ JavaScript
 
 ```javascript
 async function createVirtualMachines() {
-  createResourceGroup();
-  createVirtualNetwork();
-  createSubnet();
-  createNetworkInterface(resourceGroupName, location, interfaceName);
+  await createResourceGroup();
+  await createVirtualNetwork();
+  await createSubnet();
+  await createNetworkInterface(resourceGroupName, location, interfaceName);
   const parameter = {
     location: location,
     hardwareProfile: {
