@@ -133,7 +133,7 @@ Now, you can generate both JavaScript and TypeScript workable samples with the f
 
 ```shell
 cd ${PROJECT_ROOT}
-npx dev-tool samples publish -f
+npx dev-tool samples publish --force
 ```
 You will see the workable samples in the `${PROJECT_ROOT}/samples` folder.
 
@@ -159,8 +159,8 @@ cd ${PROJECT_ROOT} && pnpm lint:fix
 
 # Adding a new third-party runtime dependency
 
-Shipped client and management libraries (those with `"sdk-type": "client"` or
-`"sdk-type": "mgmt"` in `package.json`) may not take a new third-party runtime
+Shipped client, management, and provisioning libraries (those with
+`"sdk-type": "client"`, `"sdk-type": "mgmt"`, or `"sdk-type": "provisioning"` in `package.json`) may not take a new third-party runtime
 dependency without approval. This is enforced in CI by the
 `@azure/azure-sdk/ts-package-json-approved-dependencies` ESLint rule (part of
 `pnpm lint`), which validates the `dependencies` field of every in-scope
