@@ -48,7 +48,7 @@ To be able to leverage the asset-sync workflow
 
 - Install [Powershell](https://github.com/PowerShell/PowerShell)
   - Make sure "pwsh" command works at this step (If you follow the above link, "pwsh" is typically added to the system environment variables by default)
-- Add `dev-tool` to the `devDependencies` in the `package.json`.
+- Add `"@azure/dev-tool": "workspace:^"` to the `devDependencies` in the `package.json`.
 
 # How to run test
 
@@ -370,6 +370,7 @@ import { Recorder } from "@azure-tools/test-recorder";
 import { describe, it, assert, beforeEach, afterEach } from "vitest";
 import type { PurviewDataMapClient } from "../../src/index.js";
 import { createClient, createRecorder } from "./utils/recordedClient.js";
+import { isUnexpected } from "../../src/isUnexpected.js";
 
 describe("My test", () => {
   let recorder: Recorder;
