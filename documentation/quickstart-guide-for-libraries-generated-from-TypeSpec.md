@@ -8,7 +8,7 @@
 
 Libraries generated from TypeSpec offer layered APIs, smaller bundles, and cleaner ergonomics—while remaining familiar to existing users of the Azure SDK for JavaScript/TypeScript.
 
-Several packages are already GA, including `@azure/arm-avs`, `@azure/arm-fabric`, `@azure/arm-oracledatabase`, and `@azure/keyvault-admin`. Find the latest versions on **npm**: <https://www.npmjs.com>.
+Several packages are already GA, including `@azure/arm-avs` and `@azure/arm-oracledatabase`. Find the latest versions on **npm**: <https://www.npmjs.com>.
 
 This quickstart walks you through managing Azure resources using a TypeSpec‑generated management library. For an overview, see:  
 <https://devblogs.microsoft.com/azure-sdk/azure-sdk-modularized-libraries-for-javascript/>
@@ -91,7 +91,7 @@ import { DefaultAzureCredential } from "@azure/identity";
 **_Define some global variables_**  
 
 ```typescript
-const subscriptionId = process.env.AZURE_SUBSCRIPTION_ID;
+const subscriptionId = process.env.AZURE_SUBSCRIPTION_ID ?? "";
 const credential = new DefaultAzureCredential();
 const client = new AzureVMwareSolutionAPI(credential, subscriptionId);
 ```
@@ -125,7 +125,7 @@ import { DefaultAzureCredential } from "@azure/identity";
 **_Authentication and set up_**  
 
 ```typescript
-const subscriptionId = process.env.AZURE_SUBSCRIPTION_ID;
+const subscriptionId = process.env.AZURE_SUBSCRIPTION_ID ?? "";
 const credential = new DefaultAzureCredential();
 const client = new AzureVMwareSolutionAPI(credential, subscriptionId);
 ```
