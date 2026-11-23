@@ -172,7 +172,7 @@ In the Copilot Chat panel, use the `@` prefix to summon an agent by name:
 ```
 
 ```
-@tester Are there any untested public methods in sdk/storage/storage-blob/src/BlobClient.ts?
+@tester Are there any untested public methods in sdk/storage/storage-blob/src/Clients.ts?
 ```
 
 ```
